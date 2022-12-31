@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+@font-face{
+	src: url("../fonts/Katuri.otf");
+	font-family: "katuri"	
+}
+
+@font-face{
+	src: url("../fonts/NanumGothic.otf");
+	font-family: "NanumGothic"
+}
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+
+/* 네비바 */
+.navbar_container{
+	background-color: white;
+	box-shadow: 0 5px 10px -9px rgba(103, 117, 243, 100);
+	height: 84px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.navbar {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+.navbar a{
+	display: block;
+	float: left;
+	padding: 10px;
+	
+}
+
+.navbar ul{
+	float: right;
+
+}
+
+.navbar ul li {
+	float: left;
+	list-style: none;
+	line-height: 64px;
+	margin: auto;
+}
+
+.navbar ul li a img{
+	vertical-align: middle;
+}
+
+
+.body{
+	margin: 0 auto;
+	width: 960px;
+	padding-top: 120px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.works{
+	margin: 0 auto;
+}
+
+.work_container .board_container{
+	width: 960px;
+}
+
+/* 글씨 */
+.work{
+	float: left;
+	margin: 10px;
+	font-family: 'NanumGothic';
+	cursor: pointer;
+}
+
+.medium{
+	font-family: "katuri";
+	font-size: 32px;
+	margin: 10px;
+}
+
+.light{
+	font-family: "NanumGothic";
+	margin: 12px;
+	word-wrap: break-word;
+}
+
+.title{
+	font-size: 20px;
+}
+
+.author{
+	font-size: 14px;
+}
+
+.genre{
+	font-size: 12px;
+	color: gray;
+}
+
+.introduce{
+	font-size: 14px;
+}
+
+.price{
+	font-size: 14px;
+}
+
+/* 이미지 */
+.workThumbnail{
+	width: 280px;
+	height: 160px;
+	border-radius: 5px;
+}
+
+.viewWork{
+	width: 280px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 5px;
+	box-shadow: 0 1px 10px -3px rgba(0, 0, 0, 0.3);
+	margin: 40px;
+}
+
+/* 간격 */
+.viewWork_title{
+	margin: 24px 12px 12px 12px;
+}
+
+.viewWork_author, .viewWork_genre, .viewWork_introduce{
+	margin: 12px 24px;
+}
+
+.viewWork_price{
+	margin: 12px 12px 24px 12px; 
+	vertical-align: middle;
+	display: flex;
+	align-items: center;
+}
+
+.episodeThumbnail{
+	width: 120px;
+	height: 80px;
+	border-radius: 5px;
+}
+
+
+.newEpisode{
+	margin: 24px;
+}
+
+.bar{
+	width: 100%;
+	border: 3px solid rgba(241, 241, 241, 1);
+}
+
+.episodes{
+	width: 100%;
+}
+
+.episode{
+	width: 100%;
+	vertical-align: middle;
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.episodeInfo{
+	vertical-align: middle;
+	margin: 0 24px;
+}
+
+.episodeTitle{
+	margin: 10px;
+	font-size: 16px;
+}
+
+.episodeDate{
+	margin: 10px;
+	color: gray;
+	font-size: 12px;
+}
+
+.episodeThumbnail{
+	text-align: left;
+}
+
+/* 링크 보라색 */
+a {
+	text-decoration: none;
+	color: black;
+}
+
