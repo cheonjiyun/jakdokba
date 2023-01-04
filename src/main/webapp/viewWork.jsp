@@ -55,15 +55,18 @@
 			<p class="light price viewWork_price"><img src="./img/coin.png">&nbsp;&nbsp;에피소드 당 <%= rs.getInt("price") %> 원</p>
 		</div>
 		
-		<div class="newEpisode">
+	
 	<%
+		//본인 작품이면 에피소드 등록
 		if(username != null && username.equals(rs.getString("author"))){
 	%>
-		<a href='newEpisode.jsp?number=<%=rs.getString("number")%>'><img src="./img/plus.png">에피소드 등록하기</a>
+		<div class="newEpisode">
+			<a class="light newEpisode_button" href='newEpisode.jsp?number=<%=rs.getString("number")%>'><img src="./img/plus.png">&nbsp;&nbsp;에피소드 등록하기</a>
+		</div>
 	<%
 		}}
 	%>
-		</div>
+		
 		<hr class="bar">
 		<div class="episodes">
 	<%		
@@ -74,7 +77,7 @@
 		rs = pstmt.executeQuery();
 		while(rs.next()){
 	%>
-		<div class="episode" onclick="location.href='./payment.jsp?episodeNumber=<%= rs.getInt("episodeNumber")%>'">
+		<div class="episode" onclick="location.href='./payment.jsp?episodeNumber=<%= rs.getInt("episodeNumber")%>&#epsidoeLocation'">
 			<img class="episodeThumbnail" src='./img/upload/<%= rs.getString("episodeThumbnail") %>'>
 				<div class="episodeInfo">
 					<p class="light episodeTitle"><%= rs.getString("episodeTitle") %></p>
@@ -89,5 +92,6 @@
 		<% }conn.close(); %>
 		</div>
 </div>
+<%@ include file="./bottom.jsp" %>
 </body>
 </html>

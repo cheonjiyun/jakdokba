@@ -44,3 +44,7 @@ SELECT LAST_INSERT_ID();
 SELECT MAX(number) FROM work;
 
 SELECT * FROM work WHERE number = (SELECT DISTINCT number FROM episode WHERE episodeNumber = 11);
+
+SELECT MAX(episodeDate) FROM episode WHERE number = 11;
+
+SELECT * FROM comment WHERE episodeNumber = 1 ORDER BY commentDate DESC

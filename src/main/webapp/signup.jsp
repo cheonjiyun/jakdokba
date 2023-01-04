@@ -10,38 +10,39 @@
 <body>
 <%@ include file="./top.jsp" %>
 <div class="body">
-	<form action="processSignup.jsp" name="signup" method="post">
+	<form class="viewInput" action="processSignup.jsp" name="signup" method="post">
 		<div>
-			<p>회원가입</p>
+			<p class="medium inputTitle">회원가입</p>
 		</div>
 		<div>
-			<p>아이디</p>
-			<input type="text" name="id"/>
+			<p class="light label">아이디</p>
+			<input class="light input"  type="text" name="id"/>
 		</div>
 		<div>
-			<p>비밀번호</p>
-			<input type="password" name="password" />
+			<p class="light label">비밀번호</p>
+			<input class="light input" type="password" name="password" />
 		</div>
 		<div>
-			<p>비밀번호 확인</p>
-			<input type="password" name="passwordCheck" />
+			<p class="light label">비밀번호 확인</p>
+			<input class="light input" type="password" name="passwordCheck" />
 		</div>
 		<div>
-			<p>이메일</p>
-			<input type="text" name="email"/>
+			<p class="light label">이메일</p>
+			<input class="light input" type="text" name="email"/>
 		</div>
 		<div>
-			<p>닉네임</p>
-			<input type="text" name="name"/>
+			<p class="light label">닉네임</p>
+			<input class="light input" type="text" name="name"/>
 		</div>
 		
 		<div>
-			<input type="submit" value="회원가입" />
+			<input class="light submit" type="submit" value="회원가입" />
 		</div>
 		<div>
-			<a href="login.jsp">로그인</a>
+			<a class="light submitSide" href="login.jsp">로그인</a>
 		</div>
 	</form>
 </div>
+<%@ include file="./bottom.jsp" %>
 </body>
 </html>

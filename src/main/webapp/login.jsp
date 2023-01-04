@@ -19,29 +19,29 @@
 	
 %>
 <div class="body">
-	<form action="processLogin.jsp?from=<%= recentURI %>" name="login" method="post">
+	<form class="viewInput" action="processLogin.jsp?from=<%= recentURI %>" name="login" method="post">
 		<div>
-			<p>로그인</p>
+			<p class="medium inputTitle">로그인</p>
 		</div>
 		<div>
 			<input type="hidden" name="episodeNumber" value='<%= episodeNumber %>'>
-		
 		</div>
 		<div>
-			<p>아이디</p>
-			<input type="text" name="id"/>
+			<p class="light label">아이디</p>
+			<input class="light input" type="text" name="id"/>
 		</div>
 		<div>
-			<p>비밀번호</p>
-			<input type="password" name="password" />
+			<p class="light label">비밀번호</p>
+			<input class="light input" type="password" name="password" />
 		</div>
 		<div>
-			<input type="submit" value="로그인"/>
+			<input class="light submit" type="submit" value="로그인"/>
 		</div>
 		<div>
-			<a href="signup.jsp">회원가입</a>
+			<a class="light submitSide" href="signup.jsp">회원가입</a>
 		</div>
 	</form>
 </div>
+<%@ include file="./bottom.jsp" %>
 </body>
 </html>

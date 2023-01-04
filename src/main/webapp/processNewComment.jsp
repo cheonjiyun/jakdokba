@@ -42,7 +42,7 @@
 	pstmt.close();
 	conn.close();
 
-	response.sendRedirect("viewEpisode.jsp?episodeNumber="+episodeNumber+"&name="+name);
+	response.sendRedirect("viewEpisode.jsp?episodeNumber="+episodeNumber+"&name="+name+"&#comment_input_contianer");
 
 %>
 </body>

@@ -15,6 +15,9 @@
 	margin: 0;
 }
 
+html, body{
+	height: 100%;
+}
 
 /* 네비바 */
 .navbar_container{
@@ -57,11 +60,33 @@
 .body{
 	margin: 0 auto;
 	width: 960px;
+	height: auto;
+	min-height: calc(100% - 120px);
 	padding-top: 120px;
+	padding-bottom: 200px;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 }
+
+/* bottom */
+.bottom{
+	background-color: #F0F0F0;
+	height: 160px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: relative;
+	transform: translateY(-100%);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.bottom_logo{
+	margin: auto;
+}
+
 
 .works{
 	margin: 0 auto;
@@ -77,6 +102,7 @@
 	margin: 10px;
 	font-family: 'NanumGothic';
 	cursor: pointer;
+	border-radius: 5px;
 }
 
 .medium{
@@ -125,7 +151,8 @@
 	align-items: center;
 	flex-direction: column;
 	border-radius: 5px;
-	box-shadow: 0 1px 10px -3px rgba(0, 0, 0, 0.3);
+	border: 1px solid #D9D9D9;
+	/* box-shadow: 0 1px 10px -3px rgba(103, 117, 243, 1); */
 	margin: 40px;
 }
 
@@ -153,7 +180,19 @@
 
 
 .newEpisode{
-	margin: 24px;
+	padding: 2px;
+	margin: 22px;
+	background-color: rgba(103, 117, 243, 1);
+	border-radius: 5px;
+	/* box-shadow: 0 1px 10px -3px rgba(103, 117, 243, 1);  */ 
+}
+
+.newEpisode_button{
+	vertical-align: middle;
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+	color: white;
 }
 
 .bar{
@@ -194,9 +233,304 @@
 	text-align: left;
 }
 
+/* 에피소드보기 꾸미기 */
+.viewEpisode_top{
+	width: 280px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 5px;
+	border: 1px solid #D9D9D9;
+	/*box-shadow: 0 1px 10px -3px rgba(0, 0, 0, 0.3);*/
+	margin: 40px;
+}
+
+.viewEpisode_image{
+	width: 690px;
+}
+
+.viewEpiosde_thumbnail{
+	width: 280px;
+	height: 160px;
+	border-radius: 5px;
+}
+
+.viewEpisode_name{
+	font-size: 20px;
+}
+
+.viewEpisode_title{
+	font-size: 14px;
+}
+
+.viewEpisode_episode{
+	margin: 40px;
+}
+
+.episode_comment_container{
+	float: left;
+}
+
+.viewEpisode_comment{
+	font-size: 20px;
+	margin: 24px 12px 12px 12px;
+}
+.viewEpisode_comment_content{
+	font-size: 16px;
+	margin: 12px 12px 6px 12px;
+}
+
+.viewEpisode_comment_introduce{
+	margin: 24px 12px 12px 12px; 
+	vertical-align: middle;
+	display: flex;
+	align-items: center;
+}
+
+.comment_input_contianer_aa{
+	margin: 12px 0px;
+}
+.comment_input{
+	border-radius: 5px;
+	border: 1px solid rgba(103, 117, 243, 1);
+	font-size: 16px;
+	padding: 10px;
+	resize: none;
+	margin: 12px 12px 6px 12px;
+}
+
+.comment_submit{
+	margin: 6px 12px 12px 12px;
+}
+
+.comments{
+	width: 100%;
+	margin: 12px 0 0 0;
+}
+
+.bar_comment{
+	border: 0.5px solid rgba(241, 241, 241, 1);
+}
+
+.commentDate{
+	color: gray;
+}
+
+.commentInfo{
+	vertical-align: middle;
+	display: flex;
+	align-items: center;
+}
+
+.comment_content{
+	font-size: 16px;
+}
+
+/* input */
+.viewInput{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.input{
+	width: 320px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid rgba(103, 117, 243, 1);
+	padding: 10px;
+}
+
+.submit{
+	font-size: 16px;
+	color: white;
+	background-color: rgba(103, 117, 243, 1);
+	border: 1px solid rgba(103, 117, 243, 1);
+	border-radius: 5px;
+	padding: 10px 22px;
+	cursor: pointer;
+}
+
+.label{
+	font-size: 20px;
+	margin: 20px 10px 0px 10px;
+}
+
+.input_container{
+	margin: 40px;
+}
+
+.inputTitle{
+	margin: 10px 10px 40px 10px;
+}
+
+.submitSide{
+	font-size: 16px;
+}
+
+/* user */
+.user_login{
+	font-size: 20px;
+	margin: 30px;
+}
+
+.inner{
+	margin: 30px 30px 15px 30px;
+}
+
+.user_author{
+	font-size: 20px;
+	margin: 15px;
+}
+
+.user_logout{
+	font-size: 14px;
+	margin: 15px;
+	color: gray;
+}
+
+.user_title{
+	font-size: 20px;
+}
+
+.user_introduce{
+	font-size: 14px;
+}
+
+.user_count{
+	font-size: 14px;
+}
+
+.user_date{
+	font-size: 12px;
+	color: gray;
+}
+
+.newWork{
+	width: 280px;
+	height: 266px;
+	border: 1px solid rgba(103, 117, 243, 1);
+	border-radius: 5px;
+	float: left;
+	margin: 10px;
+	cursor: pointer;
+	color: rgba(103, 117, 243, 1);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.newWork_button{
+	vertical-align: middle;
+	display: flex;
+	align-items: center;
+	font-size: 20px;
+	color: rgba(103, 117, 243, 1);
+	margin: auto;
+	
+}
+.newWork_author{
+	font-size: 16px;
+	color: gray;
+	width: 320px;
+	padding: 11px;
+}
+
+.newWork_introduce{
+	width: 320px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid rgba(103, 117, 243, 1);
+	padding: 10px;
+	resize: none;
+}
+
+.newWork_genre{
+	font-size: 20px;
+}
+
+.nework_price{
+	float: left;
+	vertical-align: middle;
+	display: flex;
+	align-items: center;
+}
+
+.input_price{
+	width: 300px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid rgba(103, 117, 243, 1);
+	padding: 10px;
+	float: left;
+	vertical-align: middle;
+	display: flex;
+	align-items: center;
+}
+
+.newWork_price_container{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+input[class="gerneCheckbox-input"] + label{
+	display: inline-block;
+	padding: 10px 22px;
+	border-radius: 5px;
+	border: 1px solid rgba(103, 117, 243, 1);
+	background-color: white;
+	cursor: pointer;
+	font-size: 16px;
+	margin: 6px;
+}
+
+input[class="gerneCheckbox-input"]:checked + label {
+	background-color: rgba(103, 117, 243, 1);
+	color: white;
+}
+
+input[class="gerneCheckbox-input"]{
+	display: none;
+}
+
+.checkbox_container{
+	width: 366px;
+	margin: 10px;
+}
+
+.checkbox_inner{
+	padding: 0 10px 10px 10px;
+}
+
+/*파일 업로드 */
+.fileUpload-label{
+	display: inline-block;
+	padding: 10px 22px;
+	border-radius: 5px;
+	border: 1px solid rgba(103, 117, 243, 1);
+	background-color: rgba(103, 117, 243, 1);
+	color: white;
+	cursor: pointer;
+	font-size: 16px;
+	margin: 6px 12px 12px 12px;
+}
+
+.upload-name{
+	width: 180px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid rgba(103, 117, 243, 1);
+	padding: 10px;
+}
+
+input[class="fileUpload-input"]{
+	display: none;
+}
+
 /* 링크 보라색 */
 a {
 	text-decoration: none;
 	color: black;
 }
-

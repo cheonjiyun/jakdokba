@@ -52,7 +52,8 @@
 			<p>흠으으으으으으으으으으으으으으음</p>
 		</div>
 	</div>
-</div>
 
+</div>
+<%@ include file="./bottom.jsp" %>
 </body>
 </html>
