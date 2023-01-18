@@ -11,18 +11,22 @@
 <%@ include file="./top.jsp" %>
 <%@ include file="dbconnection.jsp" %>
 <div class="body">
-	<a href="./newBoard.jsp">글쓰기</a>
-	<table>
+	<div>
+		<div><p class="medium">토론의 장</p></div>
+
+	</div>
+	<div>
+	<table class="board">
 		<thead>
-			<tr>
-				<th></th>
-				<th>제목</th>
-				<th>작성자</th>
-				<th>작성일</th>
-				<th>조회수</th>
+			<tr class="board_tr">
+				<th class="light board_title board_th"> </th>
+				<th class="light board_title board_th">제목</th>
+				<th class="light board_author board_th">작성자</th>
+				<th class="light board_date board_th">작성일</th>
+				<th class="light board_viewCounts board_th">조회수</th>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody class="board_tbody">
 		<%
 			request.setCharacterEncoding("utf-8");
 		
@@ -41,15 +45,15 @@
 				
 				if(pageNumber-10 < rsboard.getInt("boardNumber") && rsboard.getInt("boardNumber") <= pageNumber  ){
 		%>
-			<tr>
-				<td><img src="./img/upload/<%= rsboard.getString("boardThumbnail") %>"></td>
-				<td><a href='viewBoard.jsp?boardTitle=<%=rsboard.getString("boardTitle")%>'><%= rsboard.getString("boardTitle") %></a></td>
-				<td><%= rsboard.getString("author") %></td>
-				<td><% 
+			<tr class="board_tr">
+				<td class="board_td"><img src="./img/upload/<%= rsboard.getString("boardThumbnail") %>"></td>
+				<td class="board_td"><a href='viewBoard.jsp?boardTitle=<%=rsboard.getString("boardTitle")%>'><%= rsboard.getString("boardTitle") %></a></td>
+				<td class="board_td"><%= rsboard.getString("author") %></td>
+				<td class="board_td"><% 
 					String boardDate = rsboard.getString("boardDate");
 					boardDate = boardDate.substring(0, 10);
 				%><%= boardDate %></td>
-				<td><%= rsboard.getString("boardViews") %></td>
+				<td class="board_td"><%= rsboard.getString("boardViews") %></td>
 			</tr>
 		<% }}
 			pstmtboard.close();	
@@ -62,7 +66,9 @@
 			%>
 		</tbody>
 	</table>
-	
+			
+	<div class="write_right"><a class="light submit" href="./newBoard.jsp">글쓰기</a></div>
+		
 	<!-- 페이징 -->
 	<% if(pageNumber != 10){ %>
 	<a href="board.jsp?pageNumber=<%= pageNumber - 10 %>">이전</a>
@@ -74,6 +80,7 @@
 		
 		conn.close();
 		%>
+	</div>
 </div>
 </body>
 </html>

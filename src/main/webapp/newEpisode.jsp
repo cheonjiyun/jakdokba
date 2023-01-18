@@ -69,7 +69,7 @@
 			<input class="light input" type="text" name="episodeComment"/>
 		</div>
 		<div>
-			<input class= type="submit" value="등록"/>
+			<input class="light submit" type="submit" value="등록"/>
 		</div>
 	</form>
 </div>

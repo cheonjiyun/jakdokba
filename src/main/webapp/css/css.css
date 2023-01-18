@@ -534,3 +534,28 @@ a {
 	text-decoration: none;
 	color: black;
 }
+
+/* board */
+.board{
+	width: 1024px;
+	border-top: 1px solid rgba(103, 117, 243, 1);
+	border-bottom: 1px solid rgba(103, 117, 243, 1);
+	border-collapse: collapse;
+}
+
+.board_th{
+	border-bottom: 1px solid rgba(103, 117, 243, 1);
+	padding: 12px;
+}
+
+.board_td{
+	padding: 12px;
+}
+
+.board_title{
+}
+
+.write_right{
+	float: right
+}
+
